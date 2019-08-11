@@ -18,4 +18,15 @@ public class MainClassTest {
         Assert.assertTrue("Число " + testedNumber + " меньше " + expectedMinNumber,
                 testedNumber > expectedMinNumber);
     }
+
+    @Test
+    public void testGetClassString() {
+        String expectedPartString1 = "hello";
+        String expectedPartString2 = "Hello";
+        MainClass mainClass = new MainClass();
+        String testedString = mainClass.getClassString();
+        Assert.assertTrue("В строке " + testedString + " нет подстрок " + expectedPartString1 +
+                " или " + expectedPartString2,
+                testedString.contains(expectedPartString1) || testedString.contains(expectedPartString2));
+    }
 }
