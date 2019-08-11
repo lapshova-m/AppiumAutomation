@@ -10,4 +10,12 @@ public class MainClassTest {
                 expectedLocalNumber, MainClass.getLocalNumber());
     }
 
+    @Test
+    public void testGetClassNumber() {
+        int expectedMinNumber = 45;
+        MainClass mainClass = new MainClass();
+        int testedNumber = mainClass.getClassNumber();
+        Assert.assertTrue("Число " + testedNumber + " меньше " + expectedMinNumber,
+                testedNumber > expectedMinNumber);
+    }
 }
